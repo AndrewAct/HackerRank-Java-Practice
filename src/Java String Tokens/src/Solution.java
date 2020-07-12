@@ -12,19 +12,22 @@ public class Solution {
         // It seems we need to remove some spaces
         s = s.trim();
 
+        // if length is 0
+        if (s.length() == 0 || s == null) {
+            System.out.println(0);
+            return;
+        }
 
-        String[] words = s.split("[^a-zA-Z]");
+
+        String[] words = s.split("[^A-Za-z]+");
         System.out.println(words.length);
+
 
         for (String word: words){
             System.out.println(word);
         }
 
-        // if length is 0
-        if (s.length() == 0) {
-            System.out.println(0);
-            return;
-        }
+
     }
 }
 
